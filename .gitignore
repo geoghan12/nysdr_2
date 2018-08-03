@@ -1,0 +1,19 @@
+
+n't track content of these folders (folder/)
+
+# Don't track these files:
+*.csv
+
+.ipynb_checkpoints
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
