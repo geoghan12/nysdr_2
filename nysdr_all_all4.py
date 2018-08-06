@@ -17,15 +17,15 @@ delay=20
 go_to_search = driver.find_element_by_xpath("//*[@id='frmMain']/table/tbody/tr/td/table[2]/tbody/tr/td[2]/table/tbody/tr/td[2]/table[1]/tbody/tr[3]/td/table/tbody/tr[6]/td[3]/input")
 go_to_search.click()
 
-csv_file = open('allNYS_ped_2.csv', 'w')
+csv_file = open('ped_brooklyn.csv', 'w')
 writer = csv.writer(csv_file)
 
 specialty_button= driver.find_element_by_name("SpecialtyGroupParam")
 specialty_button.click()
 specialty_opts=specialty_button.find_elements_by_tag_name("option")
-five_boros=[34,44,45,55]#[3,4,5,26,30,
+five_boros=[5]#[3,4,5,26,30,34,44,45,55]#[3,4,5,26,30,
 #specialty_opts=["Obstetrics and Gynecology"]
-for s_ind in [5]:#range(len(specialty_opts)):
+for s_ind in [19]:#range(len(specialty_opts)):
 	specialty_button= driver.find_element_by_name("SpecialtyGroupParam")
 	specialty_button.click()
 	specialty_opts=specialty_button.find_elements_by_tag_name("option")
@@ -55,7 +55,8 @@ for s_ind in [5]:#range(len(specialty_opts)):
 				print(option.text)
 				county=option.text
 				option.click()
-				search_it_up=driver.find_element_by_xpath('//*[@id="frmMain"]/table/tbody/tr/td/table[2]/tbody/tr/td[2]/table/tbody/tr/td[2]/table[1]/tbody/tr[3]/td/table/tbody/tr[19]/td[1]/input')
+				search_it_up=driver.find_element_by_name('pbSearch')
+				#search_it_up=driver.find_element_by_xpath('//*[@id="frmMain"]/table/tbody/tr/td/table[2]/tbody/tr/td[2]/table/tbody/tr/td[2]/table[1]/tbody/tr[3]/td/table/tbody/tr[19]/td[1]/input')
 				search_it_up.click()
 
 				# csv_file = open('allNYS3.csv', 'w')

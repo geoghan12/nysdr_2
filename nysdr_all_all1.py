@@ -23,7 +23,7 @@ writer = csv.writer(csv_file)
 specialty_button= driver.find_element_by_name("SpecialtyGroupParam")
 specialty_button.click()
 specialty_opts=specialty_button.find_elements_by_tag_name("option")
-five_boros=[3,4,5]#,26,30,34,44,45,55]
+five_boros=[3,4,5,26,30]#,34,44,45,55]
 #specialty_opts=["Obstetrics and Gynecology"]
 for s_ind in [13]:#range(len(specialty_opts)):
 	specialty_button= driver.find_element_by_name("SpecialtyGroupParam")
